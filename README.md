@@ -1,3 +1,5 @@
+![Awesome RSI — A Research Map of Recursive Self-Improvement](assets/awesome-rsi-map.png)
+
 # Awesome RSI (Recursive Self-Improvement) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 Recursive Self-Improvement (RSI) refers to processes in which AI systems improve their own capabilities and can also improve the mechanisms that generate subsequent improvements.
@@ -74,6 +76,7 @@ Foundational papers, formal treatments, and surveys that establish the vocabular
 - [A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence](https://arxiv.org/abs/2507.21046) - Surveys what, when, and how foundation-model agents can evolve across models, memory, tools, and architectures. (TMLR 2026)
 - [Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) - Surveys recent self-improvement work by update target and loop closure while separating bounded refinement from open-ended RSI. (arXiv 2026)
 - [Self-evolving Embodied AI](https://arxiv.org/abs/2602.04411) - Defines the self-evolving embodied AI paradigm across memory self-updating, task self-switching, environment self-prediction, embodiment self-adaptation, and model self-evolution, and systematically reviews work on each component. (arXiv 2026)
+- [Self-Improvements in Modern Agentic Systems: A Survey](https://arxiv.org/abs/2607.13104) - Unifies self-improving agents through a system-level view of foundation-model and scaffold updates. (arXiv 2026)
 - [A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems](https://arxiv.org/abs/2508.07407) - Organizes agent evolution around feedback loops, update targets, domain applications, evaluation, and safety. (arXiv 2025)
 - [A Survey on Self-Evolution of Large Language Models](https://arxiv.org/abs/2404.14387) - Presents a four-stage taxonomy of experience acquisition, refinement, updating, and evaluation for self-evolving LLMs. (arXiv 2024)
 - [A Formulation of Recursive Self-Improvement and Its Possible Efficiency](https://arxiv.org/abs/1805.06610) - Gives a formal definition of a restricted RSI system and analyzes when efficient recursive improvement is computable. (arXiv 2018)
@@ -90,6 +93,7 @@ Methods that improve model weights or training behavior through self-generated f
 
 ### Self-Training & Self-Reward
 
+- [DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training](https://arxiv.org/abs/2609.04094) - Trains long-horizon tool-using agents with reinforcement learning from rubric scores assigned by an LLM judge instead of ground-truth outcomes, redistributing each score over the steps behind every criterion, and shows that the policy model can act as its own judge and still reach verifier-trained performance. (arXiv 2026)
 - [EvoLM: Self-Evolving Language Models through Co-Evolved Discriminative Rubrics](https://arxiv.org/abs/2605.03871) - Alternately trains one model to generate discriminative rubrics and improve its policy from rubric-conditioned rewards without human annotations or external reward models. (arXiv 2026)
 - [RecurSE: Bounded Recursive Self-Evaluation for LLM Rubric Judges](https://arxiv.org/abs/2608.24231) - Trains LLM rubric judges via closed-loop self-evaluation with synchronized-policy checker rewards that use no external gold labels in RL training, while monitoring reward validity to determine the early-stopping window for self-evolution. (arXiv 2026)
 - [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](https://arxiv.org/abs/2309.00267) - Studies reinforcement learning from AI-generated preferences as a scalable alternative to direct human feedback. (ICML 2024)
@@ -201,9 +205,13 @@ Systems that use interaction among multiple agents to improve reasoning, policie
 
 ### Co-Evolution
 
+- [R-Zero: Self-Evolving Reasoning LLM from Zero Data](https://arxiv.org/abs/2508.05004) - Co-evolves a Challenger that proposes questions at the edge of a Solver's ability with a Solver trained on majority-vote pseudo-labels, starting from a single base model and no external data. (ICLR 2026)
+- [TTCS: Test-Time Curriculum Synthesis for Self-Evolving](https://arxiv.org/abs/2601.22628) - Co-evolves a question synthesizer and a solver at test time so that self-generated curricula stabilize self-consistency-rewarded parameter updates on the test distribution. (arXiv 2026)
+- [VisPlay: Self-Evolving Vision-Language Models](https://openaccess.thecvf.com/content/CVPR2026/html/He_VisPlay_Self-Evolving_Vision-Language_Models_CVPR_2026_paper.html) - Co-evolves a Questioner and a Reasoner initialized from the same vision-language model to generate and solve increasingly challenging questions from unlabeled images. (CVPR 2026)
 - [Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning](https://arxiv.org/abs/2511.16043) - Co-evolves curriculum and executor agents initialized from the same base model to improve tool-using reasoning without human-curated data. (arXiv 2025)
 - [DEBATE, TRAIN, EVOLVE: Self Evolution of Language Model Reasoning](https://arxiv.org/abs/2505.15734) - Fine-tunes a model on its own multi-agent debate traces and repeats the debate-training loop without ground-truth labels. (EMNLP 2025)
 - [EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms](https://arxiv.org/abs/2406.14228) - Applies mutation, crossover, and selection to expand a specialized agent into a diverse multi-agent system. (NAACL 2025)
+- [Guided Self-Evolving LLMs with Minimal Human Supervision](https://arxiv.org/abs/2512.02472) - Stabilizes Challenger-Solver co-evolution by grounding question generation in a small set of human examples and mixing them into curriculum-based Solver training. (arXiv 2025)
 - [SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents](https://arxiv.org/abs/2403.08715) - Improves an agent policy through behavior cloning and self-reinforcement on filtered multi-agent social interactions. (ACL 2024)
 
 ### Inference-time Debate
@@ -237,6 +245,7 @@ Systems that automate parts of AI research and development, including experiment
 - [AutoResearch: Insight In, Hallucination Out](https://arxiv.org/abs/2608.17906) - Connects grounded idea generation with coordinated execution agents that implement, diagnose, and independently review experiments before accepting research conclusions. (arXiv 2026)
 - [Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering](https://arxiv.org/abs/2607.28568) - Connects execution-grounded operator training with long-horizon evolution in the open OpenMLE stack, using machine-learning engineering as an AI4AI testbed for RSI. (arXiv 2026)
 - [FT-Dojo: Towards Autonomous LLM Fine-Tuning with Language Agents](https://arxiv.org/abs/2603.01712) - Turns data collection, training, evaluation, diagnosis, and strategy revision into an executable environment for autonomous fine-tuning agents. (arXiv 2026)
+- [LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling](https://arxiv.org/abs/2605.08083) - Lets an LLM agent discover test-time scaling controllers for other LLMs inside a cheap execution-trace environment, with discovered strategies transferring across benchmarks and model scales. (arXiv 2026)
 - [MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery](https://arxiv.org/abs/2606.06473) - Combines progressive graph search, retrospective memory, and hierarchical code generation for long-horizon end-to-end machine-learning algorithm discovery. (arXiv 2026)
 - [Towards End-to-End Automation of AI Research (The AI Scientist-v2)](https://doi.org/10.1038/s41586-026-10265-5) - Uses template-free agentic tree search to propose hypotheses, run experiments, analyze results, and write complete research papers. (Nature 2026)
 - [Towards Execution-Grounded Automated AI Research](https://arxiv.org/abs/2601.14525) - Converts LLM pre-training and post-training into executable research environments where evolutionary search learns from experimental outcomes. (arXiv 2026)
@@ -257,6 +266,7 @@ Systems that use interaction with physical or simulated environments to generate
 
 Evolutionary, quality-diversity, and open-ended processes that continually discover stronger solutions or learning systems.
 
+- [EnvHarness: Awakening Static Worlds for Agent Learning](https://arxiv.org/abs/2608.19880) - Wraps static environments in programmable plug-in components synthesized from an agent's own failure trajectories, enabling continued co-evolution of the policy and its training environments. (arXiv 2026)
 - [PACEvolve: Enabling Long-Horizon Progress-Aware Consistent Evolution](https://arxiv.org/abs/2601.10657) - Combines hierarchical context management, backtracking, and adaptive sampling to sustain collaborative long-horizon evolutionary search. (arXiv 2026)
 - [AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery](https://arxiv.org/abs/2506.13131) - Combines language-model code generation, automated evaluation, and evolutionary search to improve algorithms, including components used in AI training. (arXiv 2025)
 - [Higher Order and Self-Referential Evolution for Population-based Methods](https://openreview.net/forum?id=3tk6AES1Aj) - Evolves mutation rates and higher-order meta-mutation rates, including a self-referential top-level parameter that modifies itself. (ICML 2024 AutoRL Workshop)
@@ -371,6 +381,8 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 - [EvolveR](https://github.com/KnowledgeXLab/EvolveR) - Self-evolving LLM-agent framework that improves through a closed-loop, experience-driven lifecycle.
 - [Letta Code](https://github.com/letta-ai/letta-code) - Memory-first coding-agent harness whose long-lived agents rewrite context and learn skills from experience.
 - [Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) - Self-evolving agent framework that retrieves, evaluates, repairs, and rewrites persistent skills through reflective learning.
+- [Mnemoverse Memory](https://github.com/mnemoverse/mcp-memory-server) - MCP server for a hosted persistent-memory engine that re-ranks an agent's recall from reported outcomes, so what helped or misled on one task changes what is returned on later ones.
+- [Reef](https://github.com/Human-Agent-Society/reef) - Continual-learning serving infrastructure that records agent interactions, turns matched feedback into model-weight or harness updates, and publishes accepted updates as versioned artifacts.
 - [Voyager](https://github.com/MineDojo/Voyager) - Embodied lifelong-learning agent with automatic curriculum, iterative prompting, and a reusable skill library.
 
 ### Automated Search / AI R&D
